@@ -1,0 +1,25 @@
+Pseudo-codes for weavescalculator.py
+************************************
+
+Initializations:
+
+*We define the constant phi
+*We define the sigma 1 and 2 matrices (called s1 and s2)
+*We define the +-2 and +-4 powers of sigma 1 and 2
+	these are contained in lists of 4 elements (s1List and s2List)
+
+-------------------------------------------------
+
+weaveMatrix(weave, s):
+	We start with the identity
+	
+	Multipy it by the sigma matrices with the powers contained
+	in 'weave' starting with sigma_'s'
+	
+	Return the result
+
+squareMod(x):
+	The square of the module of x.
+
+traceNorm(W, U):
+	returns the error as defined in Field and Simula

@@ -1,0 +1,18 @@
+Algorithms for gatefinder.py
+****************************
+
+Define the target gate's hermitian adjoint (for technical reasons)
+
+Load the weaves library (made with braidgenerator.py)
+or compute them in the script
+
+Compute the matrix for each weave
+
+Compute the distance between W and U using traceNorm() (for sigma 1 and 2)
+	if this distance is shorter than the previous one:
+		save this weave as the best weave
+Do the same for every weave
+
+----------------------------
+
+In the end we're left with the best weave in the weaves library

@@ -1,0 +1,28 @@
+Pseudo-codes for BraidGenerator.py
+**********************************
+
+newSeq(x, length): (example: x = [0,2,-4])
+	increase the left-most element of 'x' by +2
+	if this element is equal to +4:
+		set this element to -4 and increase the next one
+	if this element is equal to 0:
+		set it to -4
+		(0 represents an empty element)
+	(the result will be x = [0,2,-2])
+
+
+checkSeq(x, length):
+	returns the sum of the elements of x (abs. values)
+
+generatePosSeqList(length):
+	start with a list = [0,...,0,0] of length = 'length'/2
+	generate the next sequence with newSeq()
+	save it
+	repeat until you reach [4,...,4,4]
+
+generateSeqList(length):
+	returns the sequence generated with generatePosSeqList()
+	 + the same sequence multiplied by -1
+
+timedGeneration(length):
+	same as generateSeqList() but with a timer
