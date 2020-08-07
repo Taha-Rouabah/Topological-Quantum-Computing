@@ -61,7 +61,7 @@ def draw(weave, init_sigma, file_name):
     # Generating the images list
     images = []
     cur_sigma = init_sigma
-    for p in weave:
+    for p in reversed(weave):
         # drawing the move |p|-times
         if p > 0:
             images += [SIGMA[cur_sigma][0]] * p
@@ -78,5 +78,5 @@ def draw(weave, init_sigma, file_name):
     output = concat_n_images(images)
     plt.imshow(output)
     plt.axis('off')
-    plt.savefig(file_name, dpi=150)
+    plt.savefig(file_name, dpi=300)
     plt.show()
